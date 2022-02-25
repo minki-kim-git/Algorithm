@@ -6,8 +6,8 @@
 //
 
 import Foundation
-var a = ["F","","F","","F","","F",""]
-var b = ["","F","","F","","F","","F"]
+var b = ["F","","F","","F","","F",""]
+var a = ["","F","","F","","F","","F"]
 var count = 0
 for i in 0...7{
     let input = readLine()!.map{String($0)}
