@@ -36,3 +36,23 @@ func mackdae(i:Int){
     }
 }
 mackdae(i: input)
+
+//배열 사용안하고 나누는 경우 
+func mackdae2(i:Int){
+    var x = 64
+    while true {
+        if i > cm {
+            cm += x
+            count += 1
+        }
+        if i < cm {
+            cm -= x
+            count -= 1
+        }
+        if i == cm {
+            print(count)
+            break
+        }
+        x /= 2 //반복문이 한번씩 돌 때마다 64를 2씩 나눠줌
+    }
+}
