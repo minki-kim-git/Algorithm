@@ -53,6 +53,8 @@ func merge(arr:[Int],start:Int,end:Int){
 
         //정복 하는 부분
         mergesort(arr: arr, start: start, mid: mid, end: end)
+    } else {
+        return
     }
 }
 merge(arr: array, start: 0, end: array.count-1)
