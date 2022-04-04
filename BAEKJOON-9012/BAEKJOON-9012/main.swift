@@ -7,28 +7,52 @@
 
 //만일 x 가 VPS 라면 이것을 하나의 괄호에 넣은 새로운 문자열 “(x)”도 VPS 가 된다. 그리고 두 VPS x 와 y를 접합(concatenation)시킨 새로운 문자열 xy도 VPS 가 된다. 예를 들어 “(())()”와 “((()))” 는 VPS 이지만 “(()(”, “(())()))” , 그리고 “(()” 는 모두 VPS 가 아닌 문자열이다.
 
+//import Foundation
+//var arr = [String]()
+//for _ in 1...Int(readLine()!)! {
+//    let input = readLine()!.map{String($0)}
+//    print(vps(i:input))
+//    arr.removeAll()
+//}
+//func vps(i:[String]) -> String{
+//    for j in i{
+//        if j == "(" {
+//            arr.append("(")
+//        } else {
+//            if arr.isEmpty { //배열에 "(" 가 없으면 no
+//                return "NO"
+//            }
+//                arr.remove(at:arr.count-1)
+//        }
+//    }
+//    if arr.isEmpty { // "(" , ")" 가 짝을 맞춰 있기 때문에 배열은 비어지게 된다.
+//        return "YES"
+//    } else { //배열이 비어있지 않으면 no
+//        return "NO"
+//    }
+//}
+
+//스택을 이용하지만 갯수로만 푸는방법
 import Foundation
-var arr = [String]()
+var count = 0 //stack의 갯수 표시 "(" 의 갯수만 표시
 for _ in 1...Int(readLine()!)! {
     let input = readLine()!.map{String($0)}
     print(vps(i:input))
-    arr.removeAll()
+    count = 0
 }
-func vps(i:[String]) -> String{
-    for j in i{
+func vps(i:[String])->String{
+    for j in i {
         if j == "(" {
-            arr.append("(")
+            count += 1
+        } else if count > 0 && j == ")" {
+            count -= 1
         } else {
-            if arr.isEmpty { //배열에 "(" 가 없으면 no
-                return "NO"
-            }
-                arr.remove(at:arr.count-1)
+            return "NO"
         }
     }
-    if arr.isEmpty { // "(" , ")" 가 짝을 맞춰 있기 때문에 배열은 비어지게 된다.
+    if count == 0 { // "(" , ")" 가 짝을 맞춰 있기 때문에 배열은 비어지게 된다.
         return "YES"
     } else { //배열이 비어있지 않으면 no
         return "NO"
     }
 }
-
