@@ -41,13 +41,29 @@
 //구현만으로는 어려움
 //다이나믹 프로그래밍 사용
 
+//import Foundation
+//var cardCount = Int(readLine()!)!
+//var input = readLine()!.split(separator: " ").map{Int(String($0))!}
+//var d = Array(repeating: 0, count: cardCount+1)
+//for i in 1...input.count{
+//    for j in 1...i{
+//        //d[i]를 메모이제이션 하면서 기존의 값인 d[i]와
+//        //바뀌는 값인 d[i-j]+input[j-1] 중에 최대값을 비교해나감 마지막 d의 인덱스가 정답이됨
+//        d[i] = max(d[i-j] + input[j-1],d[i])
+//    }
+//}
+//print(d.last!)
+
+
 import Foundation
+
+func card(n:Int)->Int{
+    if d[n] == 0 {
+        return 0
+    }
+    return card(n: n-1)
+}
 var cardCount = Int(readLine()!)!
 var input = readLine()!.split(separator: " ").map{Int(String($0))!}
 var d = Array(repeating: 0, count: cardCount+1)
-for i in 1...input.count{
-    for j in 1...i{
-            d[i] = max(d[i-j] + input[j-1],d[i])
-    }
-}
-print(d[cardCount])
+print(card(n:cardCount))
