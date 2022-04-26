@@ -63,3 +63,32 @@ for _ in 1...Int(readLine()!)!{
     }
     print(d[input])
 }
+//top down
+//func dp(i:Int,d:[Int])->Int{
+//    var d = d
+//    if i == 0 {
+//         return 1
+//     }
+//    if d[i] != 0 {
+//        return d[i]
+//    }
+//    if i > 2 {
+//    return dp(i: i-1, d: d) + dp(i: i-2, d: d) + dp(i: i-3, d: d)
+//    }
+//   else if i == 2 {
+//        return dp(i: i-1, d: d) + dp(i: i-2, d: d)
+//    }
+//   else if i == 1{
+//        return dp(i: i-1, d: d)
+//    }
+//    print(d)
+//    return d[i]
+//}
+//
+//for _ in 1...Int(readLine()!)!{
+//    let input = Int(readLine()!)!
+//    var d = Array(repeating:0,count:input+1)
+//    d[0] = 1
+//    print(dp(i: input, d:d))
+//}
+//
