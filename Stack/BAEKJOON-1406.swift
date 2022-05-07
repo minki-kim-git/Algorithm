@@ -109,6 +109,6 @@ for _ in 1...Int(readLine()!)!{
 aStack.reverse()
 print(bStack.map{$0}.joined(separator: ""),terminator: "")
 print(aStack.map{$0}.joined(separator: ""))
-// readLine() 함수때문인지 시간초과나옴
+// readLine() 함수때문 시간초과나옴
 
 
