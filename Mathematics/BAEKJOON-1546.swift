@@ -23,5 +23,4 @@ max = a.max()!
 //}
 var b = a.map{ $0 / max * 100 }
 var c = b.reduce(0, +)
-print(c/input)
 
