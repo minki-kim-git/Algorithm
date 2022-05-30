@@ -14,7 +14,6 @@ import Foundation
 var testCase = Int(readLine()!)!
 var price = Array(repeating: Array(repeating: 0, count: 3), count: testCase) //가격을 받는 array
 var d = Array(repeating: Array(repeating: 0, count: 3), count: testCase)
-var minSum = 0
 for i in 0..<testCase{
     let input = readLine()!.split(separator:" ").map{Int(String($0))!}
     price[i] = input
