@@ -92,3 +92,25 @@ for _ in 1...Int(readLine()!)!{
 //    print(dp(i: input, d:d))
 //}
 //
+
+
+//9095
+//브루트 포스 - 재귀 함수형태로 풀이
+//func ans(count:Int,sum:Int,goal:Int)->Int{
+//    var a = 0
+//    if count > goal { //정답이 나오지 않는 경우 , 이미 입력값을 넘어버린경우
+//        return 0
+//    }
+//    if sum == goal{ //정답을 찾음
+//        return 1
+//    }
+//    for i in 1...3{ //1,2,3 씩 더해가면서 찾기
+//        a += ans(count: count+1, sum: sum+i, goal: goal)
+//    }
+//    return a
+//}
+//var testCase = Int(readLine()!)!
+//for _ in 1...testCase{
+//    let input = Int(readLine()!)!
+//    print(ans(count: 0, sum: 0, goal: input))
+//}
