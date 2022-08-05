@@ -18,3 +18,16 @@ while arr.count > 1{
     arr.remove(at: 0)
 }
 print(arr[0])
+
+//시간초과
+
+import Foundation
+var input = Int(readLine()!)!
+var arr = Array(1...n)
+var index = 0
+while arr.count > 1{
+    arr.remove(at: 0)
+    arr.append(arr[0])
+    arr.remove(at: 0)
+}
+print(arr[0])
